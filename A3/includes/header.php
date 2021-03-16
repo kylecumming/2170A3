@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!doctype html>
 <html lang="en">
   	<head>
@@ -22,6 +26,20 @@
 
 					<div class="collapse navbar-collapse" id="navbarsExample02">
 						<ul class="navbar-nav me-auto">
+						<?php
+							//Access control for what the user will see if they are not logged in
+							if(!isset($_SESSION['user'])){
+						?>
+							<li class="nav-item active">
+								<a class="nav-link" aria-current="page" href="index.php">Home</a>
+							</li>
+							<li class="nav-item active">
+								<a class="nav-link" aria-current="page" href="jedi-login.php">Login</a>
+							</li>
+						<?php
+						//Access control for what the user will see if they are logged in
+							} else{
+						?>
 							<li class="nav-item active">
 								<a class="nav-link" aria-current="page" href="index.php">Home</a>
 							</li>
@@ -37,6 +55,9 @@
 							<li class="nav-item active">
 								<a class="nav-link" aria-current="page" href="jedi-login.php">Login</a>
 							</li>
+						<?php
+							}
+						?>
 						</ul>
 					</div>
 				</div>

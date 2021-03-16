@@ -26,12 +26,12 @@
 
 			<div class="container">
 				<article class="space-above-below">
-
-					<h2 class="fw-light">I am Rey Skywalker</h2>
-					<hr>
-					<h5 class="fw-light">Posted by Rey Skywalker on 2021-01-01, under: Introduction; The Force</h5>
-					<p class="text-muted">I know my past but my past does not define my path. I cannot avoid my Palpatine ancestry, but from now, I am Rey Skywalker. I am creating my own path using the Force to guide me. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel varius sem. Vivamus vel erat et massa pretium condimentum quis eget quam. Suspendisse cursus mollis metus, quis sodales felis sodales ut. Praesent luctus eu augue at malesuada. Integer nec mauris enim. Morbi est risus, suscipit quis fringilla eget, commodo id diam. Suspendisse cursus urna vitae tempus consequat. Proin euismod felis nisi, a dictum arcu eleifend sit amet. Aliquam leo nisi, dapibus a odio sit amet, mollis vulputate nunc. Donec ex mi, pharetra ac urna nec, pretium malesuada metus. Etiam et tortor sagittis, facilisis purus eu, auctor ex.</p>
-
+				<?php 
+				echo "<h2 class='fw-light'>" . $_GET['title'] . "</h2>";
+				echo "<hr>";
+				echo "<h5 class='fw-light'>" . "Posted by " . $_GET['author'] . " on " . $_GET['date'] . " under: " . $_GET['category'] . "</h5>";
+				echo "<p class='text-muted'>" . $_GET['content'] . "</p>";
+				?>
 				</section>
 			</div>
 		</main>

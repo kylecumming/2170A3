@@ -9,6 +9,7 @@
 	*/
 
 	require_once "includes/header.php";
+	require "includes/index.php";
 	require_once "includes/db.php";
 
 ?>
